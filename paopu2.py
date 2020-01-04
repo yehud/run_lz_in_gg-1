@@ -20,7 +20,7 @@ __shell__('apt install --no-upgrade libboost-all-dev libopenblas-dev opencl-head
 __shell__('apt install --no-upgrade nvidia-opencl-dev > /dev/null')
 #__shell__('apt --fix-broken install > /dev/null')
 
-__shell__('mkdir -p run_lz_in_gg/networks')
+__shell__('mkdir -p run_lz_in_gg-1/networks')
 __shell__('rm -rf wtlist')
 __shell__('git clone https://github.com/liujn2018/wtlist.git')
 __shell__('pip install gdown >/dev/null')
@@ -41,8 +41,8 @@ with open('wtlist/current.txt', 'rt') as wt_in:
                 filename = filename[:-3]
             else:
                 pass
-            __shell__('mv /content/{0} run_lz_in_gg/networks/'.format(filename))
+            __shell__('mv /content/{0} run_lz_in_gg-1/networks/'.format(filename))
         
 
-__shell__('cd run_lz_in_gg; chmod +x leelaz;./autogtp -k sgf')
+__shell__('cd run_lz_in_gg-1; chmod +x leelaz;./autogtp -k sgf')
 
