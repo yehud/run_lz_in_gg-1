@@ -20,7 +20,7 @@ if not os.path.exists('/usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.1'):
     __shell__('apt -qq install --no-install-recommends nvidia-opencl-dev > /dev/null')
     __shell__('apt --fix-broken install > /dev/null')
 
-__shell__('mkdir -p run_lz_in_gg/networks')
+__shell__('mkdir -p run_lz_in_gg-1/networks')
 __shell__('rm -rf wtlist')
 __shell__('git clone https://github.com/liujn2018/wtlist.git')
 __shell__('pip install gdown >/dev/null')
@@ -41,7 +41,7 @@ with open('wtlist/current.txt', 'rt') as wt_in:
                 filename = filename[:-3]
             else:
                 pass
-            __shell__('mv /content/{0} run_lz_in_gg/networks/'.format(filename))
+            __shell__('mv /content/{0} run_lz_in_gg-1/networks/'.format(filename))
         
 
-__shell__('cd run_lz_in_gg; ./autogtp | grep minute')
+__shell__('cd run_lz_in_gg-1; ./autogtp | grep minute')
