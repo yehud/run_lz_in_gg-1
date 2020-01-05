@@ -44,4 +44,6 @@ with open('wtlist/current.txt', 'rt') as wt_in:
             __shell__('mv /content/{0} run_lz_in_gg-1/networks/'.format(filename))
         
 
+        
+
 __shell__('cd run_lz_in_gg-1; ./autogtp | grep minute')
