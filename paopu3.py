@@ -9,7 +9,7 @@ def __shell__(cmd):
   
 def __shell2__(cmd):
   return subprocess.check_output(cmd, shell=True, stderr=subprocess.STDOUT).decode('utf-8')
-
+if not os.path.exists('/usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.1'):
     __shell__('apt update > /dev/null')
     __shell__('apt install qt5-default qt5-qmake curl > /dev/null')
     __shell__('apt install libboost-dev libboost-program-options-dev libopenblas-dev opencl-headers ocl-icd-opencl-dev > /dev/null')
