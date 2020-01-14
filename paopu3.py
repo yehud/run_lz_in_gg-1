@@ -43,4 +43,4 @@ with open('wtlist/current.txt', 'rt') as wt_in:
         
 
         
-__shell__('cd run_lz_in_gg-1;  chmod +x leelaz;./autogtp -k sgf| grep minute')
+__shell__('cd run_lz_in_gg-1;  chmod +x leelaz;./autogtp -g 2 -k sgf| grep minute')
